@@ -10,6 +10,8 @@ IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
 
 Y_POS_DUCK = 500
 
+OBSTACLE_Y_POS = 515
+
 IMG_BACK = pygame.image.load(os.path.join(IMG_DIR, 'Other/back.png'))
 
 # Assets Constants
@@ -61,8 +63,8 @@ LARGE_CACTUS = [
 ]
 
 BIRD = [
-    pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird1.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird3.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird4.png")),
 ]
 
 CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
