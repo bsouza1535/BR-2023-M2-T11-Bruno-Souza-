@@ -77,3 +77,22 @@ HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 DEFAULT_TYPE = "default"
 
+MISSEL = pygame.image.load(os.path.join(IMG_DIR, "Other/missel.png"))
+METEOR = pygame.image.load(os.path.join(IMG_DIR, "Other/meteor.png"))
+
+CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
+SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
+HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
+MOUNTAIN = pygame.image.load(os.path.join(IMG_DIR, 'Other/montanha.png'))
+ROCHA = pygame.image.load(os.path.join(IMG_DIR, 'Other/rochaA.png')) 
+FUNDO_MENU = pygame.image.load(os.path.join(IMG_DIR, 'Other/fundo_menu.jpg')) 
+FUNDO_MENU2 = pygame.image.load(os.path.join(IMG_DIR, 'Other/fundo_menu2.jpg')) 
+DINO_DEAD = pygame.image.load(os.path.join(IMG_DIR, 'Dino/DinoDead.png')) 
+
+BALOES = [
+    pygame.image.load(os.path.join(IMG_DIR, "Other/balao1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Other/balao2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Other/balao3.png")),
+]
+FONT_STYLE = "freesansbold.ttf"
+
