@@ -87,7 +87,7 @@ MOUNTAIN = pygame.image.load(os.path.join(IMG_DIR, 'Other/montanha.png'))
 ROCHA = pygame.image.load(os.path.join(IMG_DIR, 'Other/rochaA.png')) 
 FUNDO_MENU = pygame.image.load(os.path.join(IMG_DIR, 'Other/fundo_menu.jpg')) 
 FUNDO_MENU2 = pygame.image.load(os.path.join(IMG_DIR, 'Other/fundo_menu2.jpg')) 
-DINO_DEAD = pygame.image.load(os.path.join(IMG_DIR, 'Dino/DinoDead.png')) 
+DINO_DEAD = pygame.image.load(os.path.join(IMG_DIR, 'Dino/DinoDead.png'))
 
 BALOES = [
     pygame.image.load(os.path.join(IMG_DIR, "Other/balao1.png")),
@@ -96,4 +96,21 @@ BALOES = [
 ]
 FONT_STYLE = "freesansbold.ttf"
 SHIELD_TYPE = "shield"
+HAMMER_TYPE = "hammer"
+HEART_TYPE = "heart"
 
+import pygame
+import pygame.mixer
+
+pygame.mixer.init()
+
+COLILDE_HAMMER = pygame.mixer.Sound("sons/explodir.ogg")
+CLICK = pygame.mixer.Sound("sons/click.mp3")
+FINAL_GAME = pygame.mixer.Sound("sons/final_de_game.mp3")
+IMPACTO = pygame.mixer.Sound("sons/impacto.mp3")
+MARTELO = pygame.mixer.Sound("sons/martelo.mp3")
+MENU = pygame.mixer.Sound("sons/menu.mp3")
+SHIELD_SOM = pygame.mixer.Sound("sons/shield.mp3")
+SOM_DE_FUNDO = pygame.mixer.Sound("sons/som_de_fundo.mp3")
+EXPLODIR = pygame.mixer.Sound("sons/explodir.ogg")
+HEART_SOM = pygame.mixer.Sound("sons/heart.wav")

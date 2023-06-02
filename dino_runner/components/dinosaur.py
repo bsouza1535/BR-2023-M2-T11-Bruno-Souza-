@@ -1,16 +1,15 @@
 import pygame
 
 from pygame.sprite import Sprite
-from dino_runner.utils.constants import RUNNING, JUMPING, DUCKING, Y_POS_DUCK, DEFAULT_TYPE, SHIELD_TYPE, DUCKING_SHIELD, JUMPING_SHIELD, RUNNING_SHIELD
+from dino_runner.utils.constants import RUNNING, JUMPING, DUCKING, Y_POS_DUCK, DEFAULT_TYPE, SHIELD_TYPE, DUCKING_SHIELD, JUMPING_SHIELD, RUNNING_SHIELD, HAMMER_TYPE, RUNNING_HAMMER, DUCKING_HAMMER, JUMPING_HAMMER, HEART, HEART_TYPE
 
 X_POS = 80
 Y_POS = 470
 JUMP_VEL = 8.5
 
-DUCK_IMG = { DEFAULT_TYPE: DUCKING, SHIELD_TYPE: DUCKING_SHIELD }
-JUMP_IMG = { DEFAULT_TYPE: JUMPING, SHIELD_TYPE: JUMPING_SHIELD }
-RUN_IMG = { DEFAULT_TYPE: RUNNING, SHIELD_TYPE: RUNNING_SHIELD }
-
+DUCK_IMG = { DEFAULT_TYPE: DUCKING, SHIELD_TYPE: DUCKING_SHIELD, HAMMER_TYPE: DUCKING_HAMMER, HEART_TYPE: DUCKING_SHIELD }
+JUMP_IMG = { DEFAULT_TYPE: JUMPING, SHIELD_TYPE: JUMPING_SHIELD, HAMMER_TYPE: JUMPING_HAMMER, HEART_TYPE: JUMPING_SHIELD }
+RUN_IMG = { DEFAULT_TYPE: RUNNING, SHIELD_TYPE: RUNNING_SHIELD, HAMMER_TYPE: RUNNING_HAMMER, HEART_TYPE: RUNNING_SHIELD }
 
 
 class Dinosaur(Sprite):
@@ -84,7 +83,6 @@ class Dinosaur(Sprite):
             self.dino_jump = False
             self.jump_vel = JUMP_VEL
 
-
     def duck(self):
         self.image = DUCK_IMG[self.type][self.step_index // 5]
         if self.dino_duck:
@@ -92,7 +90,6 @@ class Dinosaur(Sprite):
             
         self.dino_duck = False
         self.step_index += 1
-        
         
     def right(self):
         self.image = RUN_IMG[self.type][self.step_index // 5]

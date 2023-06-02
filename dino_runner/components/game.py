@@ -1,11 +1,11 @@
 import pygame
+from random import randint
 
-from dino_runner.utils.sons import FINAL_GAME, SOM_DE_FUNDO
+from dino_runner.utils.constants import FINAL_GAME, SOM_DE_FUNDO
 from dino_runner.utils.text_utils import draw_message_component
 from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS, IMG_BACK, DEFAULT_TYPE
 from dino_runner.components.dinosaur import Dinosaur
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
-from dino_runner.components.draws import Draws
 from dino_runner.components.power_ups.power_up_manager import PowerUpManager
 
 
@@ -32,7 +32,6 @@ class Game:
         self.player = Dinosaur()
         self.obstacle_manager = ObstacleManager()
         self.power_up_manager = PowerUpManager() 
-        #self.draws = Draws()
 
         self.som_menu = False
         self.som_de_fundo = False
@@ -47,7 +46,6 @@ class Game:
         pygame.quit()
 
     def run(self):
-        # Game loop: events - update - draw
         if self.som_de_fundo == False:
             SOM_DE_FUNDO.play()
             self.som_de_fundo = True
@@ -78,9 +76,10 @@ class Game:
         self.power_up_manager.update(self)
 
     def update_score(self):
-        self.score += 1
+        self.score += 0.5
         if self.score % 100 == 0:
-            self.game_speed += 5
+            speedPlus = randint(1, 3)
+            self.game_speed += speedPlus
 
     def draw(self):
         self.clock.tick(FPS)
