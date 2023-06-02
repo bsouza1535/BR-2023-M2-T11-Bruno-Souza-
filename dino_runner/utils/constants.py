@@ -95,4 +95,5 @@ BALOES = [
     pygame.image.load(os.path.join(IMG_DIR, "Other/balao3.png")),
 ]
 FONT_STYLE = "freesansbold.ttf"
+SHIELD_TYPE = "shield"
 
